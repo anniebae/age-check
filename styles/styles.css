@@ -1,10 +1,37 @@
-#appWrapper .emptyMonth,
-#appWrapper .emptyDay,
-#appWrapper .emptyYear {
-  color: red;
-  display: none; }
-#appWrapper .validationMessage .success,
-#appWrapper .validationMessage .invalid {
-  display: none; }
+html, body {
+  margin: 0; }
+  html #appWrapper, body #appWrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/brickwall.jpg");
+    position: relative; }
+    html #appWrapper .overlay, body #appWrapper .overlay {
+      height: 100%;
+      width: 100%;
+      background: #3a3a3a;
+      opacity: 0.8; }
+    html #appWrapper .mainContent, body #appWrapper .mainContent {
+      position: absolute;
+      top: 50vh;
+      left: 40vw;
+      text-align: center;
+      font-family: Helvetica; }
+      html #appWrapper .mainContent h1, body #appWrapper .mainContent h1 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: "FunctionProExtraBold", sans-serif; }
+      html #appWrapper .mainContent .emptyMonth,
+      html #appWrapper .mainContent .emptyDay,
+      html #appWrapper .mainContent .emptyYear, body #appWrapper .mainContent .emptyMonth,
+      body #appWrapper .mainContent .emptyDay,
+      body #appWrapper .mainContent .emptyYear {
+        color: red;
+        display: none; }
+      html #appWrapper .mainContent .validationMessage .success, body #appWrapper .mainContent .validationMessage .success {
+        color: #00ff00;
+        display: none; }
+      html #appWrapper .mainContent .validationMessage .invalid, body #appWrapper .mainContent .validationMessage .invalid {
+        color: #ff1d00;
+        display: none; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,14 +1,54 @@
-#appWrapper {
-	.emptyMonth,
-	.emptyDay,
-	.emptyYear {
-		color: red;
-		display: none;
-	}
-	.validationMessage {
-		.success,
-		.invalid {
-			display: none;
+$gray: #3a3a3a;
+$white: #ffffff;
+$red: #ff1d00;
+$green: #00ff00;
+
+html, body {
+	margin: 0;
+
+	#appWrapper {
+		height: 100vh;
+		width: 100vw;
+		background-image: url('../images/brickwall.jpg');
+		position: relative;
+
+		.overlay {
+			height:100%;
+			width: 100%;
+			background: $gray;
+			opacity: 0.8;
 		}
+
+		.mainContent {
+			position: absolute;
+			top: 50vh;
+			left: 40vw;
+			text-align: center;
+		    font-family: Helvetica;
+
+			h1 {
+				color: $white;
+				text-transform: uppercase;
+				font-family: "FunctionProExtraBold", sans-serif;
+			}
+			
+			.emptyMonth,
+			.emptyDay,
+			.emptyYear {
+				color: red;
+				display: none;
+			}
+			.validationMessage {
+				.success {
+					color: $green;
+					display: none;
+				}
+				.invalid {
+					color: $red;
+					display: none;
+				}
+			}
+		}
+
 	}
 }

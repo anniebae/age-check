@@ -29,7 +29,7 @@ function getYear() {
   year = $("#DOBYear").val();
 
   if (year === "no-year") {
-    $('.emptyYear').css('display', 'block')
+    $('.emptyYear').css('display', 'block');
   }
   $('#DOBYear').change(function(){
       $('.emptyYear').css('display', 'none');
@@ -41,10 +41,11 @@ function getMonth() {
   month = $("#DOBMonth").val();
   
   if (month === "no-month") {
-    $('.emptyMonth').css('display', 'block')
+    $('.emptyMonth').css('display', 'block');
   }
    $('#DOBMonth').change(function(){
-      $('.emptyMonth').css('display', 'none')
+      $('.emptyMonth').css('display', 'none');
+      clearValidation();
   });
 }
 
@@ -52,10 +53,11 @@ function getDay() {
   day = $("#DOBDay").val();
 
   if (day === "no-day") {
-    $('.emptyDay').css('display', 'block')
+    $('.emptyDay').css('display', 'block');
   }
   $('#DOBDay').change(function(){
-      $('.emptyDay').css('display', 'none')
+      $('.emptyDay').css('display', 'none');
+      clearValidation();
   });
 }
 
@@ -85,6 +87,8 @@ function validateAge() {
   if (age >= 21) {
     $('.validationMessage .success').css('display', 'block');
     $('.validationMessage .invalid').css('display', 'none');
+
+    setTimeout(function(){location.href="http://brooklynbrewery.com/"} , 1500);
   }
   if (age < 21) {
     $('.validationMessage .success').css('display', 'none');
