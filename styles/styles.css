@@ -1,0 +1,10 @@
+#appWrapper .emptyMonth,
+#appWrapper .emptyDay,
+#appWrapper .emptyYear {
+  color: red;
+  display: none; }
+#appWrapper .validationMessage .success,
+#appWrapper .validationMessage .invalid {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */

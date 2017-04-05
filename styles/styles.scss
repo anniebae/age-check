@@ -1,0 +1,14 @@
+#appWrapper {
+	.emptyMonth,
+	.emptyDay,
+	.emptyYear {
+		color: red;
+		display: none;
+	}
+	.validationMessage {
+		.success,
+		.invalid {
+			display: none;
+		}
+	}
+}
