@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 $gray: #3a3a3a;
 $white: #ffffff;
 $red: #ff1d00;
 $green: #00ff00;
+$darkGreen: #009941;
 
 html, body {
 	margin: 0;
+
+	.overlay {
+		height:100%;
+		width: 100%;
+		background: $gray;
+		opacity: 0.8;
+		position: absolute;
+		z-index: 1;
+	}
 
 	#appWrapper {
 		height: 100vh;
@@ -12,32 +24,46 @@ html, body {
 		background-image: url('../images/brickwall.jpg');
 		position: relative;
 
-		.overlay {
-			height:100%;
-			width: 100%;
-			background: $gray;
-			opacity: 0.8;
-		}
-
 		.mainContent {
 			position: absolute;
-			top: 0;
+			top: 15%;
 			left: 0;
 			text-align: center;
 		    font-family: Helvetica;
+		    z-index: 2;
+		    width: 100%;
+			color: $white;
 
 			h1 {
+				text-transform: uppercase;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 900;
+				font-style: normal;
+			}
+
+			.DOBDropdown {
+				margin: 25px 0;
+			}
+
+			#enter-btn {
+				background: $darkGreen;
+				border: none;
 				color: $white;
 				text-transform: uppercase;
-				font-family: "FunctionProExtraBold", sans-serif;
+				font-weight: 900;
+				font-size: 16px;
+				padding: 10px 70px;
+			}
+
+			.emptyState {
+				.emptyMonth,
+				.emptyDay,
+				.emptyYear {
+					color: red;
+					display: none;
+				}
 			}
 			
-			.emptyMonth,
-			.emptyDay,
-			.emptyYear {
-				color: red;
-				display: none;
-			}
 			.validationMessage {
 				.success {
 					color: $green;

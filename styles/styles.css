@@ -1,30 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 html, body {
   margin: 0; }
+  html .overlay, body .overlay {
+    height: 100%;
+    width: 100%;
+    background: #3a3a3a;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 1; }
   html #appWrapper, body #appWrapper {
     height: 100vh;
     width: 100vw;
     background-image: url("../images/brickwall.jpg");
     position: relative; }
-    html #appWrapper .overlay, body #appWrapper .overlay {
-      height: 100%;
-      width: 100%;
-      background: #3a3a3a;
-      opacity: 0.8; }
     html #appWrapper .mainContent, body #appWrapper .mainContent {
       position: absolute;
-      top: 0;
+      top: 15%;
       left: 0;
       text-align: center;
-      font-family: Helvetica; }
+      font-family: Helvetica;
+      z-index: 2;
+      width: 100%;
+      color: #ffffff; }
       html #appWrapper .mainContent h1, body #appWrapper .mainContent h1 {
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-style: normal; }
+      html #appWrapper .mainContent .DOBDropdown, body #appWrapper .mainContent .DOBDropdown {
+        margin: 25px 0; }
+      html #appWrapper .mainContent #enter-btn, body #appWrapper .mainContent #enter-btn {
+        background: #009941;
+        border: none;
         color: #ffffff;
         text-transform: uppercase;
-        font-family: "FunctionProExtraBold", sans-serif; }
-      html #appWrapper .mainContent .emptyMonth,
-      html #appWrapper .mainContent .emptyDay,
-      html #appWrapper .mainContent .emptyYear, body #appWrapper .mainContent .emptyMonth,
-      body #appWrapper .mainContent .emptyDay,
-      body #appWrapper .mainContent .emptyYear {
+        font-weight: 900;
+        font-size: 16px;
+        padding: 10px 70px; }
+      html #appWrapper .mainContent .emptyState .emptyMonth,
+      html #appWrapper .mainContent .emptyState .emptyDay,
+      html #appWrapper .mainContent .emptyState .emptyYear, body #appWrapper .mainContent .emptyState .emptyMonth,
+      body #appWrapper .mainContent .emptyState .emptyDay,
+      body #appWrapper .mainContent .emptyState .emptyYear {
         color: red;
         display: none; }
       html #appWrapper .mainContent .validationMessage .success, body #appWrapper .mainContent .validationMessage .success {

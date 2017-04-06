@@ -6,10 +6,9 @@
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+	<div class="overlay"></div>
 	<div id="appWrapper">
 
-		<div class="overlay"></div>
-		
 		<div class="mainContent">
 			<img src="images/brewery-logo.png" alt="">
 			<h1>Welcome to Brooklyn</h1>
@@ -124,10 +123,12 @@
 
 
 			<button id="enter-btn">Enter</button>
-
-			<p class="emptyMonth">Please select a month</p>
-			<p class="emptyDay">Please select a day</p>
-			<p class="emptyYear">Please select a year</p>
+			
+			<div class="emptyState">
+				<p class="emptyMonth">Please select a month</p>
+				<p class="emptyDay">Please select a day</p>
+				<p class="emptyYear">Please select a year</p>
+			</div>
 
 			<div class="validationMessage">
 				<p class="success">Welcome!</p>
