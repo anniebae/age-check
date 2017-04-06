@@ -28,7 +28,7 @@ html, body {
         text-transform: uppercase;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 52px;
+        font-size: 36px;
         font-style: normal; }
       html #appWrapper .mainContent p.subtext, body #appWrapper .mainContent p.subtext {
         font-size: 12px; }
@@ -40,7 +40,8 @@ html, body {
       body #appWrapper .mainContent .daySelect,
       body #appWrapper .mainContent .yearSelect {
         width: 175px;
-        display: inline-block; }
+        display: block;
+        margin: 0 auto; }
         html #appWrapper .mainContent .monthSelect select,
         html #appWrapper .mainContent .daySelect select,
         html #appWrapper .mainContent .yearSelect select, body #appWrapper .mainContent .monthSelect select,
@@ -49,7 +50,7 @@ html, body {
           color: #8e8e8e;
           width: 100%;
           height: 30px;
-          margin: 8px 0;
+          margin: 5px 0;
           border: 0;
           border: 1px solid black;
           background: #fff url("../images/carat.png") no-repeat;
@@ -84,5 +85,22 @@ html, body {
       html #appWrapper .mainContent .validationMessage .invalid, body #appWrapper .mainContent .validationMessage .invalid {
         color: #ff1d00;
         display: none; }
+
+@media screen and (min-width: 768px) {
+  html #appWrapper .mainContent h1, body #appWrapper .mainContent h1 {
+    font-size: 52px; }
+  html #appWrapper .mainContent .monthSelect,
+  html #appWrapper .mainContent .daySelect,
+  html #appWrapper .mainContent .yearSelect, body #appWrapper .mainContent .monthSelect,
+  body #appWrapper .mainContent .daySelect,
+  body #appWrapper .mainContent .yearSelect {
+    display: inline-block;
+    margin: 0 3px; }
+    html #appWrapper .mainContent .monthSelect select,
+    html #appWrapper .mainContent .daySelect select,
+    html #appWrapper .mainContent .yearSelect select, body #appWrapper .mainContent .monthSelect select,
+    body #appWrapper .mainContent .daySelect select,
+    body #appWrapper .mainContent .yearSelect select {
+      margin: 8px 0; } }
 
 /*# sourceMappingURL=styles.css.map */
