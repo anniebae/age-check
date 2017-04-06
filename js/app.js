@@ -1,3 +1,4 @@
+// Global variables
 var month,
     day,
     year,
@@ -11,11 +12,8 @@ $(function() {
   $("#enter-btn").click(function() {
     birthdayString();
     validateAge();
-
-
   })
 });
-
 
 function birthdayString() {
   getYear();
@@ -77,34 +75,32 @@ function getAge(birthDate) {
   function isLeap(year) {
     return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
   }
-  // days since the birthdate    
+
   var days = Math.floor((now.getTime() - birthDate.getTime())/1000/60/60/24);
       age = 0;
-  // iterate the years
+
   for (var y = birthDate.getFullYear(); y <= now.getFullYear(); y++){
     var daysInYear = isLeap(y) ? 366 : 365;
     if (days >= daysInYear){
       days -= daysInYear;
       age++;
-      // increment the age only if there are available enough days for the year.
     }
   }
-  // return age;
-  console.log("age: " + age);
 }
 
 function validateAge() {
   if (age >= 21) {
     $('.validationMessage .success').css('display', 'block');
     $('.validationMessage .invalid').css('display', 'none');
-
-    setTimeout(function(){location.href="http://brooklynbrewery.com/"} , 1500);
+    setTimeout(function(){
+      location.href="http://brooklynbrewery.com/"
+    }, 1500);
   }
+
   if (age < 21) {
     $('.validationMessage .success').css('display', 'none');
     $('.validationMessage .invalid').css('display', 'block');
   }
-  console.log('validateage' + age);
 }
 
 function clearValidation() {

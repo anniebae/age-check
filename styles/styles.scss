@@ -49,9 +49,7 @@ html, body {
 
 			p.subtext { font-size: 12px; }
 
-			.DOBDropdown {
-				margin: 25px 0;
-			}
+			.DOBDropdown { margin: 25px 0; }
 
 			.monthSelect,
 			.daySelect,
@@ -59,7 +57,6 @@ html, body {
 				width: 175px;
 				display: block;
 				margin: 0 auto;
-
 
 				select {
 					color: $lightGray;
@@ -112,10 +109,8 @@ html, body {
 				}
 			}
 		}
-
 	}
 }
-
 
 @media screen and (min-width: 768px) {
 	html, body {
