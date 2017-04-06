@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900|Open+Sans');
 $lightGray: #8e8e8e;
 $gray: 		#3a3a3a;
 $white: 	#ffffff;
@@ -30,7 +30,7 @@ html, body {
 			top: 15%;
 			left: 0;
 			text-align: center;
-		    font-family: Helvetica;
+		    font-family: 'Open Sans', sans-serif;
 		    z-index: 2;
 		    width: 100%;
 			color: $white;
@@ -71,7 +71,7 @@ html, body {
 					background: #fff url('../images/carat.png') no-repeat;
 					background-size: 12px;
 					background-position:  right 15px center;
-					font-family: 'Arial';
+					font-family: 'Open Sans', sans-serif;
 					padding-left: 24px;
 					-webkit-appearance: none;
 					-moz-appearance: none;

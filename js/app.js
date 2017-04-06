@@ -3,12 +3,16 @@ var month,
     year,
     birthday,
     birthDateStr,
-    age
+    age,
+    parts,
+    dateObj
 
 $(function() {
   $("#enter-btn").click(function() {
     birthdayString();
     validateAge();
+
+
   })
 });
 
@@ -18,6 +22,12 @@ function birthdayString() {
   getMonth();
   getDay();
   birthday = (year+month+day);
+  console.log(`birthday: ${birthday}`);
+
+  if (birthday.match(/[a-z]/i)) {
+    return false;
+  }
+
   birthDateStr = '' + birthday,
     parts = birthDateStr.match(/(\d{4})(\d{2})(\d{2})/),
     dateObj = new Date(parts[1], parts[2]-1, parts[3]); // months 0-based!
