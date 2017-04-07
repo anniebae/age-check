@@ -63,6 +63,8 @@ html, body {
           -webkit-border-radius: 25px;
           -moz-border-radius: 25px;
           border-radius: 25px; }
+      html #appWrapper .mainContent .rememberCheckbox, body #appWrapper .mainContent .rememberCheckbox {
+        margin-bottom: 20px; }
       html #appWrapper .mainContent #enter-btn, body #appWrapper .mainContent #enter-btn {
         background: #009941;
         border: none;

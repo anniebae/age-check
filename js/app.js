@@ -9,18 +9,38 @@ var month,
     dateObj
 
 $(function() {
-  $("#enter-btn").click(function() {
+  // localStorage.clear();
+
+  storeBirthday();
+  birthdayString();
+  console.log('onload: ' + age);
+
+  clearBirthdayValidation();
+
+  if (age >= 21) {
+    location.href="http://brooklynbrewery.com/"
+  }
+
+  $('#enter-btn').click(function() {
     birthdayString();
     validateAge();
-  })
+
+    if ($('#checkbox-1').is(':checked')) {
+        storeBirthday()
+        birthdayString();
+    } else {
+      localStorage.clear();
+    }
+  });
 });
 
+
+// get birthday of entered DOB
 function birthdayString() {
   getYear();
   getMonth();
   getDay();
   birthday = (year+month+day);
-  console.log(`birthday: ${birthday}`);
 
   if (birthday.match(/[a-z]/i)) {
     return false;
@@ -69,6 +89,8 @@ function getDay() {
   });
 }
 
+
+// age of entered DOB
 function getAge(birthDate) {
   var now = new Date();
 
@@ -86,8 +108,11 @@ function getAge(birthDate) {
       age++;
     }
   }
+
+  // console.log("age: " + age);
 }
 
+// age validation
 function validateAge() {
   if (age >= 21) {
     $('.validationMessage .success').css('display', 'block');
@@ -103,7 +128,48 @@ function validateAge() {
   }
 }
 
+function clearBirthdayValidation() {
+  $('.emptyYear').css('display', 'none');
+  $('.emptyMonth').css('display', 'none');
+  $('.emptyDay').css('display', 'none');
+}
+
 function clearValidation() {
   $('.validationMessage .success').css('display', 'none');
   $('.validationMessage .invalid').css('display', 'none');
+}
+
+
+// store birthday for remember me
+function storeBirthday() {
+  storeYear();
+  storeMonth();
+  storeDay();
+}
+
+function storeYear() {
+  $('#DOBYear').change(function() {
+    localStorage.setItem('yearStored', this.value);
+  });
+  if(localStorage.getItem('yearStored')){
+    $('#DOBYear').val(localStorage.getItem('yearStored'));
+  }
+}
+
+function storeMonth() {
+  $('#DOBMonth').change(function() {
+    localStorage.setItem('monthStored', this.value);
+  });
+  if(localStorage.getItem('monthStored')){
+    $('#DOBMonth').val(localStorage.getItem('monthStored'));
+  }
+}
+
+function storeDay() {
+  $('#DOBDay').change(function() {
+    localStorage.setItem('dayStored', this.value);
+  });
+  if(localStorage.getItem('dayStored')){
+    $('#DOBDay').val(localStorage.getItem('dayStored'));
+  }
 }
